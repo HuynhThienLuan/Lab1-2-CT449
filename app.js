@@ -8,8 +8,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
-
 app.get("/", (req, res) => {
     res.json({ message: "Xin chao den voi ung dung Quan Ly danh ba." });
 });
@@ -25,6 +23,5 @@ app.use((err, req, res, next) => {
         message: err.message || "Internal Server Error",
     });
 });
-    
 
 module.exports = app;
